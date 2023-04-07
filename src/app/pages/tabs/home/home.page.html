@@ -24,5 +24,13 @@
 </ion-header>
 
 <ion-content>
-  
+
+  <ion-row>
+    <swiper [config]="bannerConfig" class="banners">
+      <ng-template swiperSlide *ngFor="let banner of banners">
+        <img [src]="banner?.banner" />
+      </ng-template>
+    </swiper>
+  </ion-row>
+
 </ion-content>
